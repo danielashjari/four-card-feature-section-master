@@ -30,7 +30,7 @@ html {
   }
 */
 h1, h2, h3, p {
-  font-family: "Fraunces", serif;
+  font-family: "poppins", serif;
   font-optical-sizing: auto;
   font-style: normal;
   margin-top: 0rem;
@@ -47,6 +47,13 @@ p {
 
 a, a:visited, a:active {
   text-decoration: none;
+}
+
+header {
+  margin: 90px 40px;
+}
+header h1 {
+  font-weight: 200;
 }
 
 body main .box {
