@@ -53,15 +53,13 @@ body main .box {
   margin: 0 30px 25px 30px;
   width: 300px;
   background-color: var(--card_bg);
-  border-radius: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 body main .box .text-box {
   margin: 20px;
-}
-@media (max-width: 63.9375em) {
-  body main .box .text-box {
-    margin: 10px;
-  }
 }
 body main .box .text-box h2 {
   font-size: 1.5rem;
@@ -81,15 +79,21 @@ body main .box .text-box p {
     font-size: 0.8rem;
   }
 }
+body main .box .img-box {
+  margin: 0 25px 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 body main .supervisor {
-  box-shadow: 0 -5px 0 0 var(--superviser);
+  box-shadow: 0 -3px 0 0 var(--superviser);
 }
 body main .team-builder {
-  box-shadow: 0 -5px 0 0 var(--team-builder);
+  box-shadow: 0 -3px 0 0 var(--team-builder);
 }
 body main .karma {
-  box-shadow: 0 -5px 0 0 var(--karma);
+  box-shadow: 0 -3px 0 0 var(--karma);
 }
 body main .calculator {
-  box-shadow: 0 -5px 0 0 var(--calculator);
+  box-shadow: 0 -3px 0 0 var(--calculator);
 }/*# sourceMappingURL=style.css.map */

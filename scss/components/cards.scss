@@ -5,14 +5,11 @@ body {
         .box {
             margin: 0 30px 25px 30px;
             width: 300px;
-           // @include grid-columns(3, 20px);??
             background-color: var(--card_bg);
-            border-radius: 10px;
+            border-radius: 5px;
+            @include flex(column, stretch);
             .text-box {
                 margin: 20px;
-                @include breakpoint-down(medium) {
-                    margin: 10px;
-                }
                 h2 {
                     font-size: 1.5rem;
                     color: var(--h);
@@ -28,19 +25,24 @@ body {
                     }
                 }
             }
+
+            .img-box{
+                margin: 0 25px 25px 0;
+                @include flex(column, flex-end);
+            }
         }
 
         .supervisor{
-            box-shadow: 0 -5px 0 0 var(--superviser);
+            box-shadow: 0 -3px 0 0 var(--superviser);
         }
         .team-builder{
-            box-shadow: 0 -5px 0 0 var(--team-builder);
+            box-shadow: 0 -3px 0 0 var(--team-builder);
         }
         .karma{
-            box-shadow: 0 -5px 0 0 var(--karma);
+            box-shadow: 0 -3px 0 0 var(--karma);
         }
         .calculator{
-            box-shadow: 0 -5px 0 0 var(--calculator);
+            box-shadow: 0 -3px 0 0 var(--calculator);
         }
     }
 }
