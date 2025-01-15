@@ -1,0 +1,46 @@
+@use "../util" as *;
+
+body {
+    main {
+        .box {
+            margin: 0 30px 25px 30px;
+            width: 300px;
+           // @include grid-columns(3, 20px);??
+            background-color: var(--card_bg);
+            border-radius: 10px;
+            .text-box {
+                margin: 20px;
+                @include breakpoint-down(medium) {
+                    margin: 10px;
+                }
+                h2 {
+                    font-size: 1.5rem;
+                    color: var(--h);
+                    @include breakpoint-down(medium) {
+                        font-size: 1.2rem;
+                    }
+                }
+                p {
+                    font-size: 1rem;
+                    color: var(--p);
+                    @include breakpoint-down(medium) {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+        .supervisor{
+            box-shadow: 0 -5px 0 0 var(--superviser);
+        }
+        .team-builder{
+            box-shadow: 0 -5px 0 0 var(--team-builder);
+        }
+        .karma{
+            box-shadow: 0 -5px 0 0 var(--karma);
+        }
+        .calculator{
+            box-shadow: 0 -5px 0 0 var(--calculator);
+        }
+    }
+}

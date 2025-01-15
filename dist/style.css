@@ -1,0 +1,95 @@
+:root {
+  --team-builder: hsl(0, 78%, 62%);
+  --superviser: hsl(180, 62%, 55%);
+  --calculator: hsl(212, 86%, 64%);
+  --karma: hsl(34, 97%, 64%);
+  --h: hsl(234, 12%, 34%);
+  --p: hsl(229, 6%, 66%);
+  --bg: hsl(0, 0%, 98%);
+  --card_bg: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/*
+.fraunces-<uniquifier> {
+    font-family: "Fraunces", system-ui;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "SOFT" 0,
+      "WONK" 0;
+  }
+*/
+h1, h2, h3, p {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-top: 0rem;
+}
+
+h1, h2, h3 {
+  color: var(--h);
+}
+
+p {
+  color: var(--p);
+  font-weight: 400;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+body main .box {
+  margin: 0 30px 25px 30px;
+  width: 300px;
+  background-color: var(--card_bg);
+  border-radius: 10px;
+}
+body main .box .text-box {
+  margin: 20px;
+}
+@media (max-width: 63.9375em) {
+  body main .box .text-box {
+    margin: 10px;
+  }
+}
+body main .box .text-box h2 {
+  font-size: 1.5rem;
+  color: var(--h);
+}
+@media (max-width: 63.9375em) {
+  body main .box .text-box h2 {
+    font-size: 1.2rem;
+  }
+}
+body main .box .text-box p {
+  font-size: 1rem;
+  color: var(--p);
+}
+@media (max-width: 63.9375em) {
+  body main .box .text-box p {
+    font-size: 0.8rem;
+  }
+}
+body main .supervisor {
+  box-shadow: 0 -5px 0 0 var(--superviser);
+}
+body main .team-builder {
+  box-shadow: 0 -5px 0 0 var(--team-builder);
+}
+body main .karma {
+  box-shadow: 0 -5px 0 0 var(--karma);
+}
+body main .calculator {
+  box-shadow: 0 -5px 0 0 var(--calculator);
+}/*# sourceMappingURL=style.css.map */
