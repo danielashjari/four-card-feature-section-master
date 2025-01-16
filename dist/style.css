@@ -146,10 +146,6 @@ body main .supervisor::before {
     align-self: center;
   }
 }
-body main .supervisor:hover {
-  transform: scale(1.03);
-  transition: all 0.5s ease;
-}
 body main .team-builder::before {
   background-color: var(--team-builder);
 }
