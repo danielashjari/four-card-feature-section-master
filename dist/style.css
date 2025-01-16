@@ -50,15 +50,46 @@ a, a:visited, a:active {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   margin: 90px 40px;
 }
 header h1 {
   font-weight: 200;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg);
+}
+body main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: auto;
+}
+@media (min-width: 40em) {
+  body main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: auto;
+  }
+}
+@media (min-width: 64em) {
+  body main {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: auto;
+  }
+}
+
 body main .box {
   margin: 0 30px 25px 30px;
-  width: 300px;
+  max-width: 18.75rem;
   background-color: var(--card_bg);
   border-radius: 5px;
   display: flex;
@@ -95,12 +126,38 @@ body main .box .img-box {
 body main .supervisor {
   box-shadow: 0 -3px 0 0 var(--superviser);
 }
+@media (min-width: 64em) {
+  body main .supervisor {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: center;
+  }
+}
 body main .team-builder {
   box-shadow: 0 -3px 0 0 var(--team-builder);
+}
+@media (min-width: 64em) {
+  body main .team-builder {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 }
 body main .karma {
   box-shadow: 0 -3px 0 0 var(--karma);
 }
+@media (min-width: 64em) {
+  body main .karma {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
 body main .calculator {
   box-shadow: 0 -3px 0 0 var(--calculator);
+}
+@media (min-width: 64em) {
+  body main .calculator {
+    grid-column: -2/-1;
+    grid-row: 1/3;
+    align-self: center;
+  }
 }/*# sourceMappingURL=style.css.map */
