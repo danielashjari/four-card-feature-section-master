@@ -4,10 +4,12 @@ body {
     main {
         .box {
             margin: 0 30px 25px 30px;
-            max-width: rem(300);
+            max-width: rem(350);
             background-color: var(--card_bg);
             border-radius: 5px;
-            @include flex(column, stretch);
+            box-shadow: 0 0 2rem 0 var(--shadow);
+            overflow: hidden;
+            position: relative;
             .text-box {
                 margin: 20px;
                 h2 {
@@ -30,32 +32,61 @@ body {
                 margin: 0 25px 25px 0;
                 @include flex(column, flex-end);
             }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 0.3rem;
+                top: 0;
+                left: 0;
+            }
+
+            &:hover {
+                transform: scale(1.03);
+                transition: all 0.5s ease;
+            }
         }
 
         .supervisor {
-            box-shadow: 0 -3px 0 0 var(--superviser);
+            &::before {
+                background-color: var(--supervisor);
+            }
             @include breakpoint(large) {
                 grid-column: 1/2;
                 grid-row: 1/3;
                 align-self: center;
             }
+            &:hover {
+                transform: scale(1.03);
+                transition: all 0.5s ease;
+            }
         }
+        
         .team-builder {
-            box-shadow: 0 -3px 0 0 var(--team-builder);
+            &::before {
+                background-color: var(--team-builder);
+            }
             @include breakpoint(large) {
                 grid-column: 2/3;
                 grid-row: 1/2;
             }
         }
+
         .karma {
-            box-shadow: 0 -3px 0 0 var(--karma);
+            &::before {
+                background-color: var(--karma);
+            }
             @include breakpoint(large) {
                 grid-column: 2/3;
                 grid-row: 2/3;
             }
         }
+
         .calculator {
-            box-shadow: 0 -3px 0 0 var(--calculator);
+            &::before {
+                background-color: var(--calculator);
+            }
             @include breakpoint(large) {
                 grid-column: -2/-1;
                 grid-row: 1/3;

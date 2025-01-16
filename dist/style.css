@@ -1,8 +1,9 @@
 :root {
   --team-builder: hsl(0, 78%, 62%);
-  --superviser: hsl(180, 62%, 55%);
+  --supervisor: hsl(180, 62%, 55%);
   --calculator: hsl(212, 86%, 64%);
   --karma: hsl(34, 97%, 64%);
+  --shadow: hsl(0deg 0% 83.62%);
   --h: hsl(234, 12%, 34%);
   --p: hsl(229, 6%, 66%);
   --bg: hsl(0, 0%, 98%);
@@ -89,12 +90,12 @@ body main {
 
 body main .box {
   margin: 0 30px 25px 30px;
-  max-width: 18.75rem;
+  max-width: 21.875rem;
   background-color: var(--card_bg);
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  box-shadow: 0 0 2rem 0 var(--shadow);
+  overflow: hidden;
+  position: relative;
 }
 body main .box .text-box {
   margin: 20px;
@@ -123,8 +124,20 @@ body main .box .img-box {
   flex-direction: column;
   align-items: flex-end;
 }
-body main .supervisor {
-  box-shadow: 0 -3px 0 0 var(--superviser);
+body main .box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.3rem;
+  top: 0;
+  left: 0;
+}
+body main .box:hover {
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+}
+body main .supervisor::before {
+  background-color: var(--supervisor);
 }
 @media (min-width: 64em) {
   body main .supervisor {
@@ -133,8 +146,12 @@ body main .supervisor {
     align-self: center;
   }
 }
-body main .team-builder {
-  box-shadow: 0 -3px 0 0 var(--team-builder);
+body main .supervisor:hover {
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+}
+body main .team-builder::before {
+  background-color: var(--team-builder);
 }
 @media (min-width: 64em) {
   body main .team-builder {
@@ -142,8 +159,8 @@ body main .team-builder {
     grid-row: 1/2;
   }
 }
-body main .karma {
-  box-shadow: 0 -3px 0 0 var(--karma);
+body main .karma::before {
+  background-color: var(--karma);
 }
 @media (min-width: 64em) {
   body main .karma {
@@ -151,8 +168,8 @@ body main .karma {
     grid-row: 2/3;
   }
 }
-body main .calculator {
-  box-shadow: 0 -3px 0 0 var(--calculator);
+body main .calculator::before {
+  background-color: var(--calculator);
 }
 @media (min-width: 64em) {
   body main .calculator {
