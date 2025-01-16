@@ -1,4 +1,8 @@
+@use '../util/'as*;
+
 header{
+    @include flex(column, center);
+    text-align: center;
     h1{
         font-weight: 200;
     }
